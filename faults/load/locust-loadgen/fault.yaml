@@ -5,7 +5,7 @@ description:
     Execute the locust engine using the Python script
 kind: ChaosExperiment
 metadata:
-  name: locust-loadgen
+  name: locust-loadgenff
   labels:
     name: locust-loadgen
     app.kubernetes.io/part-of: litmus
@@ -52,7 +52,8 @@ spec:
       - apiGroups: ["litmuschaos.io"]
         resources: ["chaosengines", "chaosexperiments", "chaosresults"]
         verbs: ["create", "list", "get", "patch", "update", "delete"]
-    image: "litmuschaos.docker.scarf.sh/litmuschaos/go-runner:latest"
+    image: "kwx4957/kwx4957-runner:latest"
+    # images: "litmuschaos.docker.scarf.sh/litmuschaos/go-runner:latest"
     imagePullPolicy: Always
     args:
       - -c
@@ -62,11 +63,11 @@ spec:
     env:
       # set chaos duration (in sec) as desired
       - name: TOTAL_CHAOS_DURATION
-        value: "30"
+        value: "60"
 
       # Interval between chaos injection in sec
       - name: CHAOS_INTERVAL
-        value: "30"
+        value: "60"
 
       # Period to wait before and after injection of chaos in sec
       - name: RAMP_TIME
