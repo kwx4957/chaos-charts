@@ -83,7 +83,7 @@ spec:
         value: "30"
 
       # Provide the secret key of the Python script
-      - name: CONFIG_MAP_FILE
+      - name: CONFIG_MAP_NAME
         value: "locust-script"
 
       # Provide the image name of the helper pod
