@@ -98,7 +98,7 @@ spec:
 apiVersion: litmuschaos.io/v1alpha1
 description:
   message: |
-    Execute the k6 engine using the JS script
+    Execute the k6 engine using the Python script
 kind: ChaosExperiment
 metadata:
   name: locust-loadgen

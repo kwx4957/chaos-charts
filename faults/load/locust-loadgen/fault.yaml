@@ -5,7 +5,7 @@ description:
     Execute the locust engine using the Python script
 kind: ChaosExperiment
 metadata:
-  name: locust-loadgenff
+  name: locust-loadgen
   labels:
     name: locust-loadgen
     app.kubernetes.io/part-of: litmus
